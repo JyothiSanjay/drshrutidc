@@ -51,6 +51,8 @@ function App() {
   }
 
   return (
+    <>
+     
     <div  id="home" className="font-sans bg-[#F9FAFB] text-[#2C2C2C]">
       {/* Header */}
       <Header logo={logo} active={active} setActive={setActive} />
@@ -134,6 +136,7 @@ function App() {
       {/* Footer */}
       <Footer />
     </div>
+    </>
   );
 };
 
