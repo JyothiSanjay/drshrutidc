@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/drshrutidc/static/css/main.e5adb334.css",
+    "main.js": "/drshrutidc/static/js/main.e5a2b100.js",
+    "static/js/453.5fb00b19.chunk.js": "/drshrutidc/static/js/453.5fb00b19.chunk.js",
+    "static/media/cosmetic.webp": "/drshrutidc/static/media/cosmetic.847c20edae864d0b5cd9.webp",
+    "static/media/implants.png": "/drshrutidc/static/media/implants.4d8f17e78fb14a293044.png",
+    "static/media/cleaning.webp": "/drshrutidc/static/media/cleaning.fd9b30143b874bd96f60.webp",
+    "static/media/gal1.webp": "/drshrutidc/static/media/gal1.f4d100eddada45cd43ac.webp",
+    "static/media/gal5.webp": "/drshrutidc/static/media/gal5.f4d100eddada45cd43ac.webp",
+    "static/media/kids.jpg": "/drshrutidc/static/media/kids.eb51700e9d46fb84e16c.jpg",
+    "static/media/gal2.webp": "/drshrutidc/static/media/gal2.31e1fe68e1998df460cb.webp",
+    "static/media/logo.png": "/drshrutidc/static/media/logo.13f5eaf6f313ce8ea6f6.png",
+    "static/media/gal4.webp": "/drshrutidc/static/media/gal4.b6dfef88fedbde2e8c82.webp",
+    "static/media/gal3.webp": "/drshrutidc/static/media/gal3.9f4e368d7de590f8bb35.webp",
+    "index.html": "/drshrutidc/index.html",
+    "main.e5adb334.css.map": "/drshrutidc/static/css/main.e5adb334.css.map",
+    "main.e5a2b100.js.map": "/drshrutidc/static/js/main.e5a2b100.js.map",
+    "453.5fb00b19.chunk.js.map": "/drshrutidc/static/js/453.5fb00b19.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5adb334.css",
+    "static/js/main.e5a2b100.js"
+  ]
+}
