@@ -34,7 +34,7 @@ export default function Header({ logo, active, setActive }) {
                 />
 
                 <h1 className="text-2xl font-semibold text-[#0109f4]">
-                    Dr. Shruthi Dental Clinic
+                    Dr. Shruti's Dental Clinic
                 </h1>
             </div>
             <nav className="space-x-6 hidden md:flex">

@@ -1,4 +1,5 @@
 import heroImage from "../assets/gal2.webp";
+import docImage from "../assets/shruthi_madhu.jpeg"
 
 export default function Hero({ phoneNumber, setShowModal, setIsSubmitted, setShowSuccess }) {
     return (

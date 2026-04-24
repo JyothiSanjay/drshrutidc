@@ -7,12 +7,13 @@ import { useEffect, useState } from 'react';
 import About from './components/About';
 import Footer from './components/Footer';
 import GallerySlider from './components/GallerySlider';
-import Testimonials from './Testimonials';
+import Testimonials from './components/Testimonials';
 import Services from './components/Services';
 import Location from './components/Location';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import FloatingButtons from './components/FloatingButtons';
+import FAQ from './components/FAQ';
 
 function App() {
   const phoneNumber = "+917400239212";
@@ -110,6 +111,8 @@ function App() {
       {/* Gallery */}
       <GallerySlider />
 
+      {/* FAQ's */}
+      <FAQ />
 
       {/* Contact */}
       <Location />
