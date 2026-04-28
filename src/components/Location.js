@@ -4,7 +4,7 @@ export default function Location() {
   return (
     <section
             id="contact"
-            className="px-6 md:px-16 py-16 bg-white text-center"
+            className="px-6 md:px-16 py-16 from-[#F3F2FF] to-white text-center"
           >
     
             {/* Google Map */}

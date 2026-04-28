@@ -7,7 +7,7 @@ import kids from "../assets/kids.jpg";
 
 export default function Services() {
     return (
-        <section id="services" className="px-6 md:px-16 py-20 bg-white">
+        <section id="services" className="px-6 md:px-16 py-20 from-[#F3F2FF] to-white">
             <div className="text-center mb-14">
                 <h2 className="text-3xl md:text-4xl font-semibold text-[#2C2C2C]">
                     Our Dental Services
@@ -53,7 +53,8 @@ export default function Services() {
                     }
                 ].map((service, index) => (
                     <div
-                        className="w-full max-w-sm h-80 rounded-lg shadow-md bg-cover bg-center flex flex-col justify-end p-6"
+                         className="w-full max-w-sm h-80 rounded-lg shadow-md bg-cover bg-center flex flex-col justify-end p-6 shadow hover:shadow-xl hover:-translate-y-2 transition duration-300"
+                      
                         style={{ backgroundImage: `url(${service.img}` }}
                         key={index}
                     >

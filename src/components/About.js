@@ -1,7 +1,7 @@
 import profilePic from "../assets/shruthi_madhu.jpeg";
 export default function About() {
     return (
-        <section id="about" className="px-6 md:px-16 py-16 bg-white">
+        <section id="about" data-aos="fade-right"  className="px-6 md:px-16 py-16 bg-white">
         <div className="flex flex-col md:flex-row items-center gap-10" 
         style={{backgroundImage: "url($require(`${profilePic}`))", backgroundSize: "cover", backgroundPosition: "center"}}>
           

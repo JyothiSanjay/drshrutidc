@@ -24,7 +24,8 @@ export default function Header({ logo, active, setActive }) {
         return () => observer.disconnect();
     }, []);
     return (
-        <header className="sticky top-0 bg-white shadow-sm flex justify-between items-center px-6 md:px-12 py-4 z-50">
+        // <header className="sticky top-0 bg-white shadow-sm flex justify-between items-center px-6 md:px-12 py-4 z-50">
+        <header className="sticky top-0 backdrop-blur-md bg-white/70 border-b border-gray-200 px-6 md:px-12 py-4 z-50 flex justify-between items-center">
             <div className="flex items-center gap-3">
                 <img
                     src={logo}

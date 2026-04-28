@@ -25,20 +25,36 @@ export default function FAQ() {
       <h2 className="text-3xl font-semibold text-center mb-10">Frequently Asked Questions</h2>
 
       <div className="max-w-3xl mx-auto">
-        {faqs.map((faq, index) => (
-          <div key={index} className="border-b py-4">
-            <button
-              onClick={() => setOpenIndex(index === openIndex ? null : index)}
-              className="w-full text-left font-medium"
-            >
-              {faq.q}
-            </button>
+        {faqs.
+        // map((faq, index) => (
+        //   <div key={index} className="border-b py-4">
+        //     <button
+        //       onClick={() => setOpenIndex(index === openIndex ? null : index)}
+        //       className="w-full text-left font-medium"
+        //     >
+        //       {faq.q}
+        //     </button>
 
-            {openIndex === index && (
-              <p className="mt-2 text-gray-600">{faq.a}</p>
-            )}
-          </div>
-        ))}
+        //     {openIndex === index && (
+        //       <p className="mt-2 text-gray-600">{faq.a}</p>
+        //     )}
+        //   </div>
+        // ))
+        map((item, index) => (
+            <details
+              key={index}
+              className="group bg-[#F9FAFB] rounded-xl p-5 shadow-sm cursor-pointer"
+            >
+              <summary className="flex justify-between items-center font-medium text-lg">
+                {item.q}
+                <span className="transition-transform group-open:rotate-180">⌄</span>
+              </summary>
+              <p className="mt-3 text-gray-600 leading-relaxed">
+                {item.a}
+              </p>
+            </details>
+          ))}
+        
       </div>
     </section>
   );
