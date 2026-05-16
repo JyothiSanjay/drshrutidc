@@ -1,83 +1,81 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import heroImage from "../assets/gal2.webp";
 import docImage from "../assets/shruthi_madhu.jpeg"
+import { motion } from "framer-motion";
 
 export default function Hero({ phoneNumber, setShowModal, setIsSubmitted, setShowSuccess }) {
+    // Animation variants
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
     return (
-        <section className="relative overflow-hidden bg-gradient-to-br from-[#F3F2FF] to-white px-6 md:px-16 py-20">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+        <motion.section
+        id="home"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 bg-gradient-to-br from-[#EDEBFF] via-white to-[#F9FAFB]"
+      >
+        <motion.div variants={fadeUp} className="max-w-2xl">
+          <p className="uppercase tracking-[4px] text-sm text-[#2ECC71] font-semibold mb-3">
+            Precision Care. Beautiful Smiles.
+          </p>
 
-                {/* LEFT CONTENT */}
-                <div>
-                    <p className="text-sm text-[#2ECC71] font-medium mb-3">
-                        Trusted Dental Care in Malad East, Mumbai
-                    </p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-blue-800 via-green-500 to-indigo-400 bg-clip-text text-transparent">
+            Meet Your Dentist in Malad East
+          </h2>
 
-                    <h1 
-                    // className="text-4xl md:text-5xl font-bold text-[#2C2C2C] leading-tight mb-6"
-                    className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-800 via-green-500 to-indigo-400 bg-clip-text text-transparent leading-tight mb-6"
-                    >
-                        Confident Smiles <br />
-                        Start With Expert Care
-                    </h1>
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            Dr. Shruthi and her team are committed to continuous learning and staying updated with the latest trends in global dentistry. Our mission is to educate our patients, helping them understand the importance of oral hygiene while providing treatments that last a lifetime.
+          </p>
 
-                    <p className="text-gray-600 mb-8 text-lg">
-                        Experience gentle, advanced dental treatments with a focus on comfort,
-                        hygiene, and long-lasting results.
-                    </p>
+          <blockquote className="border-l-4 border-[#5A4FCF] pl-5 italic text-gray-700 mb-8 text-lg">
+            “Our goal isn't just to fix teeth; it's to restore confidence. We want every patient to leave our clinic with a smile they are proud to share with the world.” — Dr. Shruthi
+          </blockquote>
 
-                    <div className="flex flex-wrap gap-4">
-                        {/* <button
-                            onClick={() => { setShowModal(true); setIsSubmitted(false); setShowSuccess(false) }}
-                            className="bg-[#5A4FCF] text-white px-8 py-3 rounded-lg shadow-lg hover:opacity-90 transition"
-                        >
-                            Book Appointment
-                        </button> */}
-                        <button className="bg-[#2ECC71] text-white px-8 py-4 rounded-full shadow-lg hover:scale-105 transition font-medium" onClick={() => { setShowModal(true); setIsSubmitted(false); setShowSuccess(false) }}>
-                            Book Appointment →
-                        </button>
-                        <a
-                            href={`tel:${phoneNumber}`}
-                            className="bg-[#5A4FCF] text-white px-8 py-4 rounded-full shadow-lg hover:scale-105 transition font-medium"
-                        >
-                           Call Now
-                        </a>
-                    </div>
+          <div className="flex flex-wrap gap-4">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#2ECC71] text-white px-7 py-3 rounded-xl shadow-lg font-medium"
+                onClick={() => setShowModal(true)}
+            >
+              Book Appointment
+            </motion.button>
 
-                    {/* TRUST BADGES
-                    <div className="flex gap-6 mt-8 text-sm text-gray-500">
-                        <div>✔ 10+ Years Experience</div>
-                        <div>✔ 5000+ Happy Patients</div>
-                        <div>✔ Modern Equipment</div>
-                    </div> */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border border-[#5A4FCF] text-[#5A4FCF] px-7 py-3 rounded-xl font-medium"
+            >
+              Call Clinic
+            </motion.button>
+          </div>
+        </motion.div>
 
-                </div>
+        <motion.div
+          variants={fadeUp}
+          className="relative mt-12 md:mt-0"
+        >
+          <div className="absolute -inset-4 bg-gradient-to-r from-[#5A4FCF] to-[#2ECC71] rounded-[30px] blur-2xl opacity-20"></div>
 
-                {/* RIGHT IMAGE */}
-                {/* <div className="relative">
-                    <img
-                        src={heroImage}
-                        alt="Dentist"
-                        className="rounded-2xl shadow-xl w-full object-cover"
-                    /> */}
-                <div className="relative">
-                    <img
-                        src={heroImage}
-                        className="w-full md:w-[400px] rounded-xl shadow-lg"
-                    />
-
-
-                    {/* FLOATING CARD */}
-                    <div className="absolute bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg">
-                    {/* <div className="bg-white shadow-lg px-4 py-2 rounded-full inline-block mt-4"> */}
-                        {/* ⭐ 4.8 Google Rating
-</div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"> */}
-                        <p className="text-sm text-gray-500">Patient Satisfaction</p>
-                        <p className="text-xl font-semibold text-[#5A4FCF]">⭐ 4.9 / 5</p>
-                    </div>
-                </div>
-            </div>
-        </section >
+          <img
+            src={heroImage}
+            alt="Dr Shruthi Dental Clinic"
+            className="relative w-[380px] md:w-[480px] rounded-[28px] shadow-2xl border-4 border-white object-cover"
+          />
+        </motion.div>
+      </motion.section>
     )
 }

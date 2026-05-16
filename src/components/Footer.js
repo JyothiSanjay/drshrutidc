@@ -3,7 +3,7 @@ export default function Footer() {
     return (
       <>
         <footer className="bg-[#0109f4] text-white text-center py-6">
-        <p>© {year} Dr. Shruti's Dental Clinic</p>
+        <p>© {year} Dr. Shruthi's Dental Clinic</p>
       </footer>
       </>
     )

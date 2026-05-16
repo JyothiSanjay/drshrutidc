@@ -13,7 +13,7 @@ export default function Services() {
                     Our Dental Services
                 </h2>
                 <p className="text-gray-500 mt-3">
-                    Comprehensive care for your complete dental health
+                    As a comprehensive dental clinic in Malad East, we offer a wide array of services to keep your teeth healthy and bright:
                 </p>
             </div>
 
@@ -22,13 +22,13 @@ export default function Services() {
                 {/* Service Card */}
                 {[
                     {
-                        title: "Teeth Cleaning",
-                        desc: "Professional cleaning to maintain oral hygiene and prevent gum disease.",
+                        title: "Preventive Care",
+                        desc: "Routine cleanings, polishing, and oral cancer screenings.",
                         img: cleaning
                     },
                     {
-                        title: "Root Canal Treatment",
-                        desc: "Pain-free root canal procedures using advanced technology.",
+                        title: "Restorative",
+                        desc: "Root canal treatments (RCT), tooth-colored fillings, and crowns.",
                         img: rct
                     },
                     {
@@ -37,18 +37,18 @@ export default function Services() {
                         img: cosmetic
                     },
                     {
-                        title: "Dental Implants",
-                        desc: "Permanent solution for missing teeth with natural appearance.",
+                        title: "Prosthetic Dentistry",
+                        desc: "We provide premium dental implants in Malad East, offering durable, natural-looking prosthetic teeth to restore your smile and confidence.",
                         img: implants
                     },
                     {
-                        title: "Braces & Aligners",
-                        desc: "Straighten teeth with modern orthodontic treatments.",
+                        title: "Orthodontics",
+                        desc: "Traditional braces and clear aligners for a straighter smile.",
                         img: braces
                     },
                     {
                         title: "Kids Dentistry",
-                        desc: "Gentle and friendly dental care for children.",
+                        desc: "Specialized, gentle dental care for your little ones",
                         img: kids
                     }
                 ].map((service, index) => (
