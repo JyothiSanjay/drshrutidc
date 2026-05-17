@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/drshrutidc/static/css/main.4c91f636.css",
-    "main.js": "/drshrutidc/static/js/main.a9ec9f5d.js",
+    "main.css": "/drshrutidc/static/css/main.d7ad9181.css",
+    "main.js": "/drshrutidc/static/js/main.e83632c8.js",
     "static/js/453.5fb00b19.chunk.js": "/drshrutidc/static/js/453.5fb00b19.chunk.js",
+    "static/media/SHRUTHI.jpg": "/drshrutidc/static/media/SHRUTHI.17ea9715a3465aef6607.jpg",
     "static/media/cosmetic.webp": "/drshrutidc/static/media/cosmetic.847c20edae864d0b5cd9.webp",
     "static/media/implants.png": "/drshrutidc/static/media/implants.4d8f17e78fb14a293044.png",
     "static/media/cleaning.webp": "/drshrutidc/static/media/cleaning.fd9b30143b874bd96f60.webp",
@@ -15,12 +16,12 @@
     "static/media/gal4.webp": "/drshrutidc/static/media/gal4.b6dfef88fedbde2e8c82.webp",
     "static/media/gal3.webp": "/drshrutidc/static/media/gal3.9f4e368d7de590f8bb35.webp",
     "index.html": "/drshrutidc/index.html",
-    "main.4c91f636.css.map": "/drshrutidc/static/css/main.4c91f636.css.map",
-    "main.a9ec9f5d.js.map": "/drshrutidc/static/js/main.a9ec9f5d.js.map",
+    "main.d7ad9181.css.map": "/drshrutidc/static/css/main.d7ad9181.css.map",
+    "main.e83632c8.js.map": "/drshrutidc/static/js/main.e83632c8.js.map",
     "453.5fb00b19.chunk.js.map": "/drshrutidc/static/js/453.5fb00b19.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c91f636.css",
-    "static/js/main.a9ec9f5d.js"
+    "static/css/main.d7ad9181.css",
+    "static/js/main.e83632c8.js"
   ]
 }
