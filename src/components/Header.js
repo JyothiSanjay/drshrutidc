@@ -48,6 +48,7 @@ export default function Header({ logo, active, setActive }) {
                     { id: "about", label: "About" },
                     { id: "testimonial", label: "Testimonials" },
                     { id: "gallery", label: "Gallery" },
+                    { id: "faq", label: "FAQ" },
                     { id: "contact", label: "Contact" }
                 ].map((item) => (
                     <a
