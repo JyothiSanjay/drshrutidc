@@ -9,8 +9,11 @@ export default function Header({ logo, active, setActive }) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
+                    console.log(entry.target.id);
+                    
                     if (entry.isIntersecting) {
                         setActiveSection(entry.target.id);
+                        setActive(entry.target.id);
                     }
                 });
             },
@@ -43,7 +46,7 @@ export default function Header({ logo, active, setActive }) {
                     { id: "home", label: "Home" },
                     { id: "services", label: "Services" },
                     { id: "about", label: "About" },
-                    { id: "testimonials", label: "Testimonials" },
+                    { id: "testimonial", label: "Testimonials" },
                     { id: "gallery", label: "Gallery" },
                     { id: "contact", label: "Contact" }
                 ].map((item) => (
