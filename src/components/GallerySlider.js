@@ -97,7 +97,7 @@ export default function GallerySlider() {
                                 key={i}
                                 src={img}
                                 className="w-1/3 rounded-xl shadow-md flex-shrink-0"
-                                alt="Clinic"
+                                alt={`Gallery${i}`}
                             />
                         ))}
                     </div>

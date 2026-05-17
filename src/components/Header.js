@@ -34,7 +34,7 @@ export default function Header({ logo, active, setActive }) {
                     src={logo}
                     alt="Clinic Logo"
                     className="w-10 h-10 object-contain"
-
+                
                 />
 
                 <h1 className="text-2xl font-semibold text-[#0109f4]">
