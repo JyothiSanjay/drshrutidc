@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Stats() {
   const stats = [
     { number: "5000+", label: "Happy Patients" },
-    { number: "10+", label: "Years Experience" },
+    { number: "15+", label: "Years Experience" },
     { number: "4.9★", label: "Google Rating" }
   ];
 

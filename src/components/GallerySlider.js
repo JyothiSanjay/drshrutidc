@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
-import gal1 from "../assets/gal1.webp";
-import gal2 from "../assets/gal2.webp";
-import gal3 from "../assets/gal3.webp";
-import gal4 from "../assets/gal4.webp";
-import gal5 from "../assets/gal5.webp";
+import gal1 from "../assets/gallery/gallery1.jpeg";
+import gal2 from "../assets/gallery/gallery2.jpeg";
+import gal3 from "../assets/gallery/gallery3.jpeg";
+import gal4 from "../assets/gallery/gallery4.jpeg";
+import gal5 from "../assets/gallery/gallery5.jpeg";
+import gal6 from "../assets/gallery/gallery6.jpeg";
+import gal7 from "../assets/gallery/gallery7.jpeg";
+import gal8 from "../assets/gallery/gallery8.jpeg";
+// import gal2 from "../assets/gal2.webp";
+// import gal3 from "../assets/gal3.webp";
+// import gal4 from "../assets/gal4.webp";
+// import gal5 from "../assets/gal5.webp";
 
 export default function GallerySlider() {
     //   const images = [
@@ -61,6 +68,9 @@ export default function GallerySlider() {
         gal3,
         gal4,
         gal5,
+        gal6,
+        gal7,
+        gal8,
     ];
 
     const [index, setIndex] = useState(0);

@@ -1,5 +1,6 @@
 import { FaPhoneAlt } from "react-icons/fa";
-import heroImage from "../assets/gal2.webp";
+// import heroImage from "../assets/gal2.webp";
+import heroImage from "../assets/hero1.jpg";
 import docImage from "../assets/shruthi_madhu.jpeg"
 import { motion } from "framer-motion";
 
@@ -37,11 +38,11 @@ const staggerContainer = {
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            Dr. Shruthi and her team are committed to continuous learning and staying updated with the latest trends in global dentistry. Our mission is to educate our patients, helping them understand the importance of oral hygiene while providing treatments that last a lifetime.
+            At Dr. Shruthi’s Dental Clinic, we combine modern dentistry with compassionate care to deliver precise, comfortable, and lasting treatments. Our goal is to help every patient achieve lifelong oral health and leave with a smile they feel confident sharing with the world.
           </p>
 
           <blockquote className="border-l-4 border-[#5A4FCF] pl-5 italic text-gray-700 mb-8 text-lg">
-            “Our goal isn't just to fix teeth; it's to restore confidence. We want every patient to leave our clinic with a smile they are proud to share with the world.” — Dr. Shruthi
+            “Our goal isn't just to fix teeth; it's to restore confidence. We want every patient to leave our clinic with a smile they are proud to share with the world.” — Dr. Shruthi's
           </blockquote>
 
           <div className="flex flex-wrap gap-4">
@@ -72,7 +73,7 @@ const staggerContainer = {
 
           <img
             src={heroImage}
-            alt="Dr Shruthi Dental Clinic"
+            alt="Dr. Shruthi's's Dental Clinic"
             className="relative w-[380px] md:w-[480px] rounded-[28px] shadow-2xl border-4 border-white object-cover"
           />
         </motion.div>

@@ -19,7 +19,7 @@ export default function Location({setShowModal, setIsSubmitted, setShowSuccess})
         {/* Left Section */}
         <div className="pr-0 md:pr-10 md:border-r border-gray-300 p-10">
           <h3 className="text-2xl font-semibold text-[#5A4FCF] mb-5">
-            Dr. Shruthi’s Dental Clinic
+            Dr. Shruthi's Dental Clinic
           </h3>
 
           <p className="text-gray-600 leading-relaxed mb-6">

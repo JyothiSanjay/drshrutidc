@@ -22,6 +22,7 @@ import { motion } from "framer-motion";
 import Map from './components/Map';
 import WhyChooseUs from './components/WhyChooseUs';
 import Thankyou from './components/modal/Thankyou';
+import ReviewsSection from './components/ReviewSection';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
   const whatsappNumber = "917400239212";
   const [showModal, setShowModal] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isValid, setIsValid] = useState(false);
   const [active, setActive] = useState("home");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const today = new Date().toISOString().split('T')[0];
@@ -47,12 +49,26 @@ function App() {
     AOS.init({ duration: 800, once: true });
   }, []);
 
+  function validateForm(params) {
+    if (!formData.Name.trim() || !formData.Phone.trim() || !formData.App_Date.trim() || !formData.Message.trim()) {
+      alert("Please fill in all required fields.");
+      setIsValid(false);
+      return;
+    }
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.Phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      setIsValid(false);
+      return;
+    }
+
+  }
   const handleSubmit = (e) => {
-    console.log(formData);
+    // console.log(formData);
 
     e.preventDefault();
     setIsSubmitted(true);
-
+    validateForm(e);
     const url = "https://script.google.com/macros/s/AKfycbw7TgPKeeMAdp5JXbRa5f7vsvYa5F1gTv8y8AMxdzNVeVCB8Gx-srguLym7VMrA9wCjwg/exec"
     fetch(url, {
       method: "POST",
@@ -104,12 +120,11 @@ function App() {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                   <input name="Name" type="text" placeholder="Name" className="border p-2 rounded" required onChange={(e) => setFormData({ ...formData, Name: e.target.value })} />
                   <input name="Phone" type="tel" placeholder="Phone" className="border p-2 rounded" required onChange={(e) => setFormData({ ...formData, Phone: e.target.value })} />
-                  <input name="App_Date" type="date" className="border p-2 rounded" required min={today} max={maxDateStr} onChange={(e) => { setTodayDate(e.target.value); setFormData({ ...formData, App_Date: e.target.value }) }} value={todayDate} />
+                  <input name="App_Date" type="date" readOnly className="border p-2 rounded" required min={today} max={maxDateStr} onChange={(e) => { setTodayDate(e.target.value); setFormData({ ...formData, App_Date: e.target.value }) }} value={todayDate} />
                   <input name="Book_Date" type="hidden" value={today} />
-                  {/* <input name="App_Time" type="time" className="border p-2 rounded" required min={today} max={maxDateStr} onChange={(e) => setFormData({ ...formData, App_Time: e.target.value })} /> */}
-                  <textarea name="Message" placeholder="Message" className="border p-2 rounded" onChange={(e) => setFormData({ ...formData, Message: e.target.value })} ></textarea >
+                  <textarea name="Message" placeholder="Message" required className="border p-2 rounded" onChange={(e) => setFormData({ ...formData, Message: e.target.value })} ></textarea >
                   <button
-                    disabled={isSubmitted}
+                    disabled={isSubmitted || !isValid}
                     className="bg-[#5A4FCF] text-white w-full py-2 rounded"
                     style={{ backgroundColor: isSubmitted ? "bg-[#8885ac]" : "bg-[#5A4FCF]", cursor: isSubmitted ? "not-allowed" : "pointer" }}
                   >
@@ -131,7 +146,8 @@ function App() {
         <WhyChooseUs />
 
         {/* Testimonials */}
-        <Testimonials />
+        {/* <Testimonials /> */}
+        <ReviewsSection />
 
         {/* Gallery */}
         <GallerySlider />
@@ -146,7 +162,7 @@ function App() {
 
         {/* Success Popup */}
         {showSuccess && (
-            <Thankyou />
+            <Thankyou setShowSuccess={setShowSuccess} setFormData={setFormData} today={today} setIsSubmitted={setIsSubmitted} />
         )}
 
         {/* Footer */}

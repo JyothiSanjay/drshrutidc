@@ -1,9 +1,14 @@
-import cleaning from "../assets/cleaning.webp";
-import rct from "../assets/rct.jpeg";
+// import cleaning from "../assets/cleaning.webp";
+import cleaning from "../assets/preventive.png";
+import rct from "../assets/rct.png";
+// import rct from "../assets/rootcanal.jpeg";
 import cosmetic from "../assets/cosmetic.webp";
 import implants from "../assets/implants.png";
-import braces from "../assets/braces.jpeg";
-import kids from "../assets/kids.jpg";
+import kids from "../assets/kids1.png";
+import braces from "../assets/ortho.jpg";
+// import braces from "../assets/braces.jpeg";
+// import kids from "../assets/kids.jpg";
+// import kids from "../assets/pediatric.jpeg";
 
 export default function Services() {
     return (
@@ -53,12 +58,12 @@ export default function Services() {
                     }
                 ].map((service, index) => (
                     <div
-                         className="w-full max-w-sm h-80 rounded-lg shadow-md bg-cover bg-center flex flex-col justify-end p-6 shadow hover:shadow-xl hover:-translate-y-2 transition duration-300"
+                         className="w-full max-w-sm h-80 rounded-lg shadow-md bg-cover bg-center flex flex-col justify-end p-6 hover:shadow-xl hover:-translate-y-2 transition duration-300"
                       
                         style={{ backgroundImage: `url(${service.img}` }}
                         key={index}
                     >
-                        <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg">
+                        <div className="bg-white/40 backdrop-blur-sm p-4 rounded-lg">
                             <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
                             <p className="text-sm text-gray-700">{service.desc}</p>
                         </div>

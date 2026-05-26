@@ -9,7 +9,7 @@ export const faqs = [
   },
   {
     q: "How much does a dental implant cost in Mumbai?",
-    a: "Dental implant costs in Mumbai typically range from ₹25,000 to ₹60,000 per tooth depending on the implant brand, bone condition, and prosthetic type. At Shruthi's Dental Clinic, we offer premium dental implants at competitive prices"
+    a: "Dental implant costs in Mumbai typically range from ₹25,000 to ₹60,000 per tooth depending on the implant brand, bone condition, and prosthetic type. At Shruthi Dental Clinic, we offer premium dental implants at competitive prices"
   },
   {
     q: "Is root canal treatment painful?",
@@ -20,7 +20,7 @@ export const faqs = [
     a: "We offer traditional metal braces, clear ceramic braces, lingual(hidden) braces, and Invisalign clear aligners.Our orthodontist will evaluate your bite and alignment to recommend the best treatment for your age, lifestyle, and budget."
   },
   {
-    q: "Do you treat children at Shruthi's Dental Clinic?",
+    q: "Do you treat children at Shruthi Dental Clinic?",
     a: "Yes! We have dedicated paediatric dental services for children of all ages.Our child - friendly environment and gentle approach make dental visits stress - free for kids, helping them build healthy oral hygiene habits from a young age."
   },
   {
@@ -29,5 +29,28 @@ export const faqs = [
   },
   {
     q: "Do you offer emergency dental treatment in Mumbai ?",
-    a: "Yes, Shruthi's Dental Clinic provides emergency dental care for toothaches, broken teeth, lost fillings, and dental trauma. Call us immediately — we keep same-day emergency slots available for urgent cases."
-  }]
+    a: "Yes, Shruthi Dental Clinic provides emergency dental care for toothaches, broken teeth, lost fillings, and dental trauma. Call us immediately — we keep same-day emergency slots available for urgent cases."
+  },
+  {
+    q: "Is this the  best dental clinic in Malad?",
+    a: "Yes we are one of the best dental clinic in malad that offers quality and reliable dental treatments in Malad at affordable price."
+  },
+  {
+    q: "Do you provide emergency dental treatment in Malad",
+    a: "Yes, we offer emergency dental treatments in Malad for severe tooth pain, broken teeth, swelling, dental trauma, and sudden infections. Same-day appointments may be available depending on urgency.",
+  },
+  {
+    q: "⁠What treatments are available at your Dental  Clinic in Malad ?",
+    a: `At our Malad Dental clinic, we provide:
+Root canal treatment (RCT),
+Dental implants,
+Teeth cleaning & polishing,
+Teeth whitening,
+Braces & aligners,
+Smile designing,
+Tooth extraction,
+Pediatric dentistry,
+Gum treatment,
+Crowns & bridges`
+  }
+];

@@ -27,7 +27,7 @@ export default function About() {
                     <img
                         src={profilePic}
                         className="relative rounded-[28px] shadow-2xl object-cover w-2/3 mx-auto border-4 border-white"
-                        alt="Dr. Shruthi"
+                        alt="Dr. Shruthi's"
                     />
                 </motion.div>
 
@@ -38,15 +38,15 @@ export default function About() {
                     </p>
 
                     <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-[#5A4FCF]">
-                        About Dr. Shruthi’s Dental Clinic
+                        About Dr. Shruthi's Dental Clinic
                     </h2>
 
-                    <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                        Dr. Shruthi’s Dental Clinic combines clinical excellence with a compassionate touch. Located in the heart of the Raheja Complex, we have established ourselves as a premier dental clinic in Malad East, dedicated to providing world-class oral healthcare to our local community.
+                    <p className="text-gray-600 leading-relaxed mb-6">
+                        Dr. Shruthi's Dental Clinic combines clinical excellence with a compassionate touch. Located in the heart of the Raheja Complex, we have established ourselves as a premier dental clinic in Malad East, dedicated to providing world-class oral healthcare to our local community.
                     </p>
 
                     <p className="text-gray-600 leading-relaxed mb-6">
-                        With a legacy spanning over 20 years of experience, we have earned the reputation of being the go-to dentist in Malad East for families seeking precision, trust, and a gentle touch.
+                        With a legacy spanning over 15 years of experience, we have earned the reputation of being the go-to dentist in Malad East for families seeking precision, trust, and a gentle touch.
                     </p>
 
                     <p className="text-gray-600 leading-relaxed mb-8">
@@ -61,7 +61,7 @@ export default function About() {
 
                         <div className="space-y-5 text-gray-600 leading-relaxed">
                             <div>
-                                <span className="font-semibold text-[#2C2C2C]">Expert Care:</span> Led by Dr. Shruthi, our team brings years of experience in restorative, cosmetic, and preventive dentistry.
+                                <span className="font-semibold text-[#2C2C2C]">Expert Care:</span> Led by Dr. Shruthi's, our team brings years of experience in restorative, cosmetic, and preventive dentistry.
                             </div>
 
                             <div>
@@ -94,10 +94,10 @@ export default function About() {
 
 //         <div>
 //             <h2 className="text-3xl font-semibold text-[#5A4FCF] mb-4">
-//                 About Dr. Shruthi’s Dental Clinic: Your Trusted Dentist in Malad East
+//                 About Dr. Shruthi's Dental Clinic: Your Trusted Dentist in Malad East
 //             </h2>
 //             <p className="text-gray-600 leading-relaxed">
-//                 Dr. Shruthi’s Dental Clinic, combines clinical excellence with a compassionate touch. Located in the heart of the Raheja Complex, we have established ourselves as a premier dental clinic in Malad East, dedicated to providing world-class oral healthcare to our local community. With a legacy spanning over 20 years of experience, we have earned the reputation of being the go-to dentist in Malad East for families seeking precision, trust, and a gentle touch.
+//                 Dr. Shruthi's Dental Clinic, combines clinical excellence with a compassionate touch. Located in the heart of the Raheja Complex, we have established ourselves as a premier dental clinic in Malad East, dedicated to providing world-class oral healthcare to our local community. With a legacy spanning over 15 years of experience, we have earned the reputation of being the go-to dentist in Malad East for families seeking precision, trust, and a gentle touch.
 //             </p>
 //             <p className="text-gray-600 mt-4 leading-relaxed">
 //                 At our clinic, we believe that a healthy smile is the foundation of overall well-being. Whether you are looking for a routine check-up or a complete smile makeover, our facility is equipped with modern technology to ensure your treatment is precise, painless, and effective.
@@ -107,7 +107,7 @@ export default function About() {
 //                 <div className="text">Finding a reliable dentist in Malad East shouldn't be a challenge. We pride ourselves on creating a stress-free environment for patients of all ages. Here’s what sets us apart:</div>
 //                 <ul className="list-disc list-inside mt-2">
 //                     <li>
-//                         <strong>Expert Care: </strong>Led by Dr. Shruthi, our team brings years of experience in restorative, cosmetic, and preventive dentistry.
+//                         <strong>Expert Care: </strong>Led by Dr. Shruthi's, our team brings years of experience in restorative, cosmetic, and preventive dentistry.
 //                     </li>
 //                     <li>
 //                         <strong>Convenient Location: </strong>Situated in <strong>Raheja Complex, Malad East, </strong>we are easily accessible for residents looking for quality dental care close to home.
@@ -118,7 +118,7 @@ export default function About() {
 //                     </li>
 //                     <li>
 //                         <strong>Specialist Doctor Empanelment:</strong>
-//                         We understand that complex dental issues require more than just general care. At Dr. Shruthi’s Dental Clinic, we don’t take shortcuts when it comes to your health. We have a panel of visiting specialist dentists who hold Master’s degrees (MDS) in various fields. Whether it is intricate gum surgery, complex root canal treatments, or paediatric care, your treatment is handled by experts who have dedicated years to mastering their specific specialities.
+//                         We understand that complex dental issues require more than just general care. At Dr. Shruthi's Dental Clinic, we don’t take shortcuts when it comes to your health. We have a panel of visiting specialist dentists who hold Master’s degrees (MDS) in various fields. Whether it is intricate gum surgery, complex root canal treatments, or paediatric care, your treatment is handled by experts who have dedicated years to mastering their specific specialities.
 
 //                     </li>
 //                 </ul>
@@ -132,9 +132,9 @@ export default function About() {
 //     </div>
 // </section>
 // <section id="about" className="px-6 md:px-16 py-16 bg-white text-center">
-//     <h2 className="text-3xl font-semibold mb-6">About Dr. Shruthi Madhu</h2>
+//     <h2 className="text-3xl font-semibold mb-6">About Dr. Shruthi's Madhu</h2>
 //     <p className="max-w-2xl mx-auto text-gray-600">
-//         Dr. Shruthi Madhu provides high-quality dental care using advanced
+//         Dr. Shruthi's Madhu provides high-quality dental care using advanced
 //         technology and a gentle approach, ensuring patient comfort and trust.
 //     </p>
 // </section>
