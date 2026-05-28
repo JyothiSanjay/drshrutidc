@@ -27,7 +27,7 @@ import ReviewsSection from './components/ReviewSection';
 
 function App() {
   const phoneNumber = "+917400239212";
-  const whatsappNumber = "917400239212";
+  const whatsappNumber = "+917400239212";
   const [showModal, setShowModal] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [isValid, setIsValid] = useState(false);
@@ -50,16 +50,17 @@ function App() {
   }, []);
 
   function validateForm(params) {
+    console.log(formData);
     if (!formData.Name.trim() || !formData.Phone.trim() || !formData.App_Date.trim() || !formData.Message.trim()) {
       alert("Please fill in all required fields.");
       setIsValid(false);
-      return;
+      return true;
     }
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(formData.Phone)) {
       alert("Please enter a valid 10-digit phone number.");
       setIsValid(false);
-      return;
+      return true;
     }
 
   }
@@ -68,8 +69,9 @@ function App() {
 
     e.preventDefault();
     setIsSubmitted(true);
-    validateForm(e);
-    const url = "https://script.google.com/macros/s/AKfycbw7TgPKeeMAdp5JXbRa5f7vsvYa5F1gTv8y8AMxdzNVeVCB8Gx-srguLym7VMrA9wCjwg/exec"
+    let hasError = validateForm(e);
+    if(!hasError) {
+    const url = "https://script.google.com/macros/s/AKfycbyOqOy9P_NR43OPDb9Yw21o8jyI4KtHg8fOwh2GeMIheeLhKfGRLz_E8fBRe9O0XKGrXQ/exec"
     fetch(url, {
       method: "POST",
       mode: 'no-cors',
@@ -84,6 +86,7 @@ function App() {
         alert("There was an error submitting your request. Please try again.");
       });
   }
+}
 
   return (
     <>
@@ -120,11 +123,12 @@ function App() {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                   <input name="Name" type="text" placeholder="Name" className="border p-2 rounded" required onChange={(e) => setFormData({ ...formData, Name: e.target.value })} />
                   <input name="Phone" type="tel" placeholder="Phone" className="border p-2 rounded" required onChange={(e) => setFormData({ ...formData, Phone: e.target.value })} />
-                  <input name="App_Date" type="date" readOnly className="border p-2 rounded" required min={today} max={maxDateStr} onChange={(e) => { setTodayDate(e.target.value); setFormData({ ...formData, App_Date: e.target.value }) }} value={todayDate} />
+                  <input name="App_Date"  onKeyDown={(e) => e.preventDefault()}
+ type="date" className="border p-2 rounded" required min={today} max={maxDateStr} onChange={(e) => { setTodayDate(e.target.value); setFormData({ ...formData, App_Date: e.target.value }) }} value={todayDate} />
                   <input name="Book_Date" type="hidden" value={today} />
                   <textarea name="Message" placeholder="Message" required className="border p-2 rounded" onChange={(e) => setFormData({ ...formData, Message: e.target.value })} ></textarea >
                   <button
-                    disabled={isSubmitted || !isValid}
+                    disabled={isSubmitted }
                     className="bg-[#5A4FCF] text-white w-full py-2 rounded"
                     style={{ backgroundColor: isSubmitted ? "bg-[#8885ac]" : "bg-[#5A4FCF]", cursor: isSubmitted ? "not-allowed" : "pointer" }}
                   >

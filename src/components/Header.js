@@ -37,7 +37,7 @@ export default function Header({ logo, active, setActive }) {
 
                 />
 
-                <h1 className="text-2xl font-semibold text-[#0109f4]">
+                <h1 className="lg:text-4xl md:text-2xl sm:text-2xl font-semibold text-[#2c5282]">
                     Dr. Shruthi's Dental Clinic
                 </h1>
             </div>

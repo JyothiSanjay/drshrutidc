@@ -28,7 +28,14 @@ export default function Location({setShowModal, setIsSubmitted, setShowSuccess})
 
           <div className="space-y-4 text-gray-600">
             <p>📞 +91 98765 43210</p>
-            <p>✉️ drshruthidentalclinic@gmail.com</p>
+            <p>✉️ <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=drshruthidentalclinic@gmail.com&su=Appointment%20Request&body=Hello%20Doctor,%20I%20would%20like%20to%20book%20an%20appointment."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-[#5A4FCF] hover:text-[#2ECC71] transition"
+>
+  dr.shruthih12@gmail.com
+</a></p>
             <p className="leading-relaxed">
               🕒 Mon - Sat <br /> Morning: 10:00 AM – 1:00 PM <br /> Evening: 06:00 PM – 9:00 PM <br /> Sunday: Closed
             </p>

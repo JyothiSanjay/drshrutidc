@@ -42,7 +42,8 @@ const staggerContainer = {
           </p>
 
           <blockquote className="border-l-4 border-[#5A4FCF] pl-5 italic text-gray-700 mb-8 text-lg">
-            “Our goal isn't just to fix teeth; it's to restore confidence. We want every patient to leave our clinic with a smile they are proud to share with the world.” — Dr. Shruthi's
+            “Our goal isn't just to fix teeth; it's to restore confidence. We want every patient to leave our clinic with a smile they are proud to share with the world.”<br /> 
+            <span className="text-sm">— Dr. Shruthi Madhu, Founder & Lead Dentist</span>
           </blockquote>
 
           <div className="flex flex-wrap gap-4">

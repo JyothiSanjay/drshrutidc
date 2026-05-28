@@ -23,7 +23,7 @@ export const  reviews = [
     name: "Dr.Madhuri Shashi Kumar ",
     rating: 5,
     review: 
-    "Dr.Shruthi has been my go- to dentist for all my general dental problems. Me and my family have had various treatments, including root canals with capping, cleaning and regular check-ups under her care. She is very patient friendly and skilled in her art, and is highly recommended by me as a family dentist."
+    "Dr.Shruthi has been my go-to dentist for all my general dental problems. Me and my family have had various treatments, including root canals with capping, cleaning and regular check-ups under her care. She is very patient friendly and skilled in her art, and is highly recommended by me as a family dentist."
   },
   {
     name: "Ajanta Gupta",
@@ -35,7 +35,7 @@ export const  reviews = [
     name: "Mrinal Jolly",
     rating: 5,
     review: 
-    "Great work by dr shruthi. She got my fathers dentures done in the least painful manner. The whole process was was great. She is a very humble and good dentist and person."
+    "Great work by Dr Shruthi. She got my fathers dentures done in the least painful manner. The whole process was was great. She is a very humble and good dentist and person."
   },
   {
     name: "Sagar Sengupta",
@@ -63,16 +63,16 @@ export const  reviews = [
   {
     name: "Priya Jainani",
     rating: 5,
-    review: "Excellent service provided by Dr. Shruthi..unfortunately had to visit during the pandemic the clinic was following all precautions and safety norms."
+    review: "Excellent service provided by Dr. Shruthi, unfortunately had to visit during the pandemic the clinic was following all precautions and safety norms."
   },{
-  name: "dheeraj manwani",
+  name: "Dheeraj manwani",
   rating: 5,
   review: "We had a good experience with Dr Shruthi, she is very good with kids as well"
   },
   {
     name: "Pradeep Yadav",
     rating: 5,
-    review: "Very good servicing providing. Trusted dental clinic for many peoples."
+    review: "Very good servicing providing. Trusted dental clinic for many people."
   },
 
 
