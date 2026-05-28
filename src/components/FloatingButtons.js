@@ -3,8 +3,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaPhoneAlt } from 'react-icons/fa';
 
 export default function FloatingButtons({ phoneNumber, whatsappNumber }) {
-    console.log(`${whatsappNumber}`);
-    
     return (
         <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
             <a

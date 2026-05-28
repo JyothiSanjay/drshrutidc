@@ -27,7 +27,7 @@ import ReviewsSection from './components/ReviewSection';
 
 function App() {
   const phoneNumber = "+917400239212";
-  const whatsappNumber = "+917400239212";
+  const whatsappNumber = "917400239212";
   const [showModal, setShowModal] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [isValid, setIsValid] = useState(false);
