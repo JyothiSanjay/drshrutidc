@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
                   Expert Care
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Led by Dr. Shruthi, our team brings years of expertise in restorative, cosmetic, and preventive dentistry.
+                  Led by Dr. Shruthi, our team brings years of expertise in restorative, cosmetic and preventive dentistry.
                 </p>
               </div>
 
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
                   Advanced Technology
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Equipped with digital diagnostics, Class B Vacuum sterilisation, and advanced treatment tools.
+                  Equipped with digital diagnostics, Class B Autoclave sterilisation and advanced treatment equipments.
                 </p>
               </div>
 
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
                   Specialist Doctor Empanelment
                 </h3>
                 <p className="text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                  Our clinic has a panel of visiting MDS specialists for advanced treatments including gum surgery, complex root canals, orthodontics, and paediatric dentistry.
+                  Our clinic has a panel of visiting MDS specialists for advanced treatments including gum surgery, complex root canals, orthodontics and paediatric dentistry.
                 </p>
               </div>
             </div>

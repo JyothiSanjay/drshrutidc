@@ -51,11 +51,6 @@ export default function Location({setShowModal, setIsSubmitted, setShowSuccess})
           <div className="relative w-full max-w-md">
             <div className="absolute -inset-3 bg-gradient-to-r from-[#5A4FCF] to-[#2ECC71] rounded-[28px] blur-2xl opacity-20"></div>
 
-            {/* <img
-                src="https://images.unsplash.com/photo-1588776814546-ec7e5c9c9f84"
-                alt="Dental Appointment"
-                className="relative rounded-[24px] shadow-2xl object-cover w-full h-[320px]"
-              /> */}
             <p className="md:text-xl leading-relaxed text-gray-600 font-light max-w-2xl mx-auto mt-10">
              Book your appointment today and experience the best dental care in Malad East. Your journey to a healthier, brighter smile starts here!
             </p>
@@ -65,7 +60,6 @@ export default function Location({setShowModal, setIsSubmitted, setShowSuccess})
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            // className="mt-8 inline-flex items-center justify-center bg-gradient-to-r from-[#5A4FCF] to-[#2ECC71] text-white px-8 py-4 rounded-2xl shadow-xl font-semibold text-lg"
             className="mt-16 inline-flex items-center justify-center  bg-[#2ECC71] text-white px-7 py-3 rounded-xl shadow-lg font-medium   text-lg"
               onClick={() => setShowModal(true)}
           >

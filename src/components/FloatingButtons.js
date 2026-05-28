@@ -12,9 +12,7 @@ export default function FloatingButtons({ phoneNumber, whatsappNumber }) {
                 // className="bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:opacity-90"
                 className="bg-green-500 w-14 h-14 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition text-white "
             >
-                <a href="https://wa.me" target="_blank" rel="noreferrer">
                     <FaWhatsapp size={30} />
-                </a>
             </a>
             <a
                 href={`tel:${phoneNumber}`}

@@ -23,6 +23,7 @@ import Map from './components/Map';
 import WhyChooseUs from './components/WhyChooseUs';
 import Thankyou from './components/modal/Thankyou';
 import ReviewsSection from './components/ReviewSection';
+import Appointment from './components/modal/Appointment';
 
 
 function App() {
@@ -33,13 +34,7 @@ function App() {
   const [isValid, setIsValid] = useState(false);
   const [active, setActive] = useState("home");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const today = new Date().toISOString().split('T')[0];
-  const time = new Date().toLocaleTimeString();
-  const maxDate = new Date();
-  maxDate.setMonth(maxDate.getMonth() + 2);
-  const maxDateStr = maxDate.toISOString().split("T")[0];
-  const [todayDate, setTodayDate] = useState(today);
-  const [formData, setFormData] = useState({ Name: '', Phone: '', App_Date: todayDate, Book_Date: today, Message: '' });
+  
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -49,44 +44,7 @@ function App() {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  function validateForm(params) {
-    console.log(formData);
-    if (!formData.Name.trim() || !formData.Phone.trim() || !formData.App_Date.trim() || !formData.Message.trim()) {
-      alert("Please fill in all required fields.");
-      setIsValid(false);
-      return true;
-    }
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(formData.Phone)) {
-      alert("Please enter a valid 10-digit phone number.");
-      setIsValid(false);
-      return true;
-    }
-
-  }
-  const handleSubmit = (e) => {
-    // console.log(formData);
-
-    e.preventDefault();
-    setIsSubmitted(true);
-    let hasError = validateForm(e);
-    if(!hasError) {
-    const url = "https://script.google.com/macros/s/AKfycbyOqOy9P_NR43OPDb9Yw21o8jyI4KtHg8fOwh2GeMIheeLhKfGRLz_E8fBRe9O0XKGrXQ/exec"
-    fetch(url, {
-      method: "POST",
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    }).then((res) => res.text())
-      .then((data) => {
-        setShowModal(false);
-        setShowSuccess(true);
-      }).catch((err) => {
-        console.error(err);
-        alert("There was an error submitting your request. Please try again.");
-      });
-  }
-}
+  
 
   return (
     <>
@@ -101,7 +59,7 @@ function App() {
         </div>
 
         {/* Floating Buttons */}
-        <FloatingButtons phoneNumber={phoneNumber} whatsappNumber={whatsappNumber} />
+        <FloatingButtons phoneNumber={phoneNumber} whatsappNumber={whatsappNumber} setShowModal={setShowModal} setShowSuccess={setShowSuccess}/>
 
         {/* Hero */}
         <Hero phoneNumber={phoneNumber} setIsSubmitted={setIsSubmitted} setShowModal={setShowModal} setShowSuccess={setShowSuccess} />
@@ -111,33 +69,8 @@ function App() {
 
         {/* Appointment Modal */}
         {showModal && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">
-            <div className="relative bg-white p-6 rounded-lg w-[90%] md:w-[400px]">
-              <div
-                onClick={() => setShowModal(false)}
-                className="absolute top-2 cursor-pointer right-2 p-2 text-gray-500 hover:text-gray-700"
-              >X
-              </div>
-              <h2 className="text-xl font-semibold  mb-4">Book Appointment</h2>
-              <div className='flex flex-col gap-3'>
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                  <input name="Name" type="text" placeholder="Name" className="border p-2 rounded" required onChange={(e) => setFormData({ ...formData, Name: e.target.value })} />
-                  <input name="Phone" type="tel" placeholder="Phone" className="border p-2 rounded" required onChange={(e) => setFormData({ ...formData, Phone: e.target.value })} />
-                  <input name="App_Date"  onKeyDown={(e) => e.preventDefault()}
- type="date" className="border p-2 rounded" required min={today} max={maxDateStr} onChange={(e) => { setTodayDate(e.target.value); setFormData({ ...formData, App_Date: e.target.value }) }} value={todayDate} />
-                  <input name="Book_Date" type="hidden" value={today} />
-                  <textarea name="Message" placeholder="Message" required className="border p-2 rounded" onChange={(e) => setFormData({ ...formData, Message: e.target.value })} ></textarea >
-                  <button
-                    disabled={isSubmitted }
-                    className="bg-[#5A4FCF] text-white w-full py-2 rounded"
-                    style={{ backgroundColor: isSubmitted ? "bg-[#8885ac]" : "bg-[#5A4FCF]", cursor: isSubmitted ? "not-allowed" : "pointer" }}
-                  >
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
+          <Appointment isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} setShowModal={setShowModal}/>
+
         )}
 
         {/* Services */}
@@ -150,7 +83,6 @@ function App() {
         <WhyChooseUs />
 
         {/* Testimonials */}
-        {/* <Testimonials /> */}
         <ReviewsSection />
 
         {/* Gallery */}

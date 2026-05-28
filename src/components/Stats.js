@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Stats() {
   const stats = [
     { number: "5000+", label: "Happy Patients" },
-    { number: "15+", label: "Years Experience" },
+    { number: "10+", label: "Years Experience" },
     { number: "4.9★", label: "Google Rating" }
   ];
 
@@ -19,7 +19,7 @@ export default function Stats() {
             className="text-center"
           >
             <h3 
-            className="text-3xl font-bold text-[#5A4FCF]"
+            className="md:text-3xl sm:text-xl font-bold text-[#5A4FCF]"
             >
               {stat.number}
             </h3>

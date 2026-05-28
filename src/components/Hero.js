@@ -53,7 +53,7 @@ const staggerContainer = {
               className="bg-[#2ECC71] text-white px-7 py-3 rounded-xl shadow-lg font-medium"
                 onClick={() => setShowModal(true)}
             >
-              Book Appointment
+              Book an Appointment
             </motion.button>
 
             <motion.button
