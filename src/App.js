@@ -69,7 +69,7 @@ function App() {
 
         {/* Appointment Modal */}
         {showModal && (
-          <Appointment isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} setShowModal={setShowModal}/>
+          <Appointment isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} setShowModal={setShowModal} setShowSuccess={setShowSuccess}/>
 
         )}
 
@@ -98,7 +98,7 @@ function App() {
 
         {/* Success Popup */}
         {showSuccess && (
-            <Thankyou setShowSuccess={setShowSuccess} setFormData={setFormData} today={today} setIsSubmitted={setIsSubmitted} />
+            <Thankyou setShowSuccess={setShowSuccess} setIsSubmitted={setIsSubmitted} />
         )}
 
         {/* Footer */}

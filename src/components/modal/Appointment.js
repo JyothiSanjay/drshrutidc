@@ -9,16 +9,17 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
     const [todayDate, setTodayDate] = useState(today);
     const [formData, setFormData] = useState({ Name: '', Phone: '', App_Date: todayDate, Book_Date: today, Message: '' });
     const [errors, setErrors] = useState({});
+    const [touched, setTouched] = useState({});
 
     function validateForm() {
         const phoneRegex = /^\d{10}$/;
         let newErrors = {};
-        if (!formData.Name?.trim()) {
+        if (!formData.Name.trim() && touched.Name) {
             newErrors.Name = "Please enter your full name";
         }
 
-        if (!formData.Phone?.trim() || !phoneRegex.test(formData.Phone)) {
-            newErrors.Phone = "Please enter your phone number";
+        if (touched.Phone && !formData.Phone.trim().length!==10 && !phoneRegex.test(formData.Phone)) {
+            newErrors.Phone = "Please enter a valid 10-digit phone number";
         }
 
         if (!formData.App_Date) {
@@ -60,6 +61,7 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
                     className="absolute top-2 cursor-pointer right-2 p-2 text-gray-500 hover:text-gray-700"
                 >X
                 </div>
+            
                 <h2 className="text-xl font-semibold  mb-4">Book an Appointment</h2>
                 <div className='flex flex-col gap-3'>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
@@ -75,7 +77,7 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
       backdrop-blur-xl
       transition
 
-      ${errors.Name
+      ${touched.Name && errors.Name
                                         ? "border-red-400 focus:ring-red-200"
                                         : "border-gray-200 focus:ring-[#5A4FCF]/20"
                                     }
@@ -83,8 +85,14 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
       focus:outline-none
       focus:ring-4
     `}
-                                required onChange={(e) => {setFormData({ ...formData, Name: e.target.value }); validateForm()}} />
-                            {errors.Name && (
+                                required onChange={(e) => {
+                                    setFormData({ ...formData, Name: e.target.value.trim() }); validateForm()
+                                }} 
+                                onBlur={() => setTouched({
+                                    ...touched, Name: true
+                                })
+                                } />
+                            {(touched.Name && errors.Name) && (
                                 <p className="mt-2 text-sm text-red-500 pl-1">
                                     {errors.Name}
                                 </p>
@@ -103,7 +111,7 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
       backdrop-blur-xl
       transition
 
-      ${errors.Phone
+      ${touched.Phone && errors.Phone
                                         ? "border-red-400 focus:ring-red-200"
                                         : "border-gray-200 focus:ring-[#5A4FCF]/20"
                                     }
@@ -111,18 +119,26 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
       focus:outline-none
       focus:ring-4
     `}
-                                required onChange={(e) => {setFormData({ ...formData, Phone: e.target.value }); validateForm()}} />
-                            {errors.Phone && (
+                                required onChange={(e) => {
+                                    setFormData({ ...formData, Phone: e.target.value.trim() }); validateForm()
+                                }}
+                                onBlur={() =>
+                                    setTouched({
+                                        ...touched,
+                                        Phone: true
+                                    })
+                                } />
+                            {(touched.Phone && errors.Phone) && (
                                 <p className="mt-2 text-sm text-red-500 pl-1">
                                     {errors.Phone}
                                 </p>
 
                             )}
                         </div>
-<div className="w-full">
-    <input name="App_Date" onKeyDown={(e) => e.preventDefault()}
-                            type="date" 
-                            className={`
+                        <div className="w-full">
+                            <input name="App_Date" onKeyDown={(e) => e.preventDefault()}
+                                type="date"
+                                className={`
       w-full
       rounded-2xl
       border
@@ -140,8 +156,8 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
       focus:outline-none
       focus:ring-4
     `}
-                            required min={today} max={maxDateStr} onChange={(e) => { setTodayDate(e.target.value); setFormData({ ...formData, App_Date: e.target.value });validateForm() }} value={todayDate} />
-                             {errors.Book_Date && (
+                                required min={today} max={maxDateStr} onChange={(e) => { setTodayDate(e.target.value); setFormData({ ...formData, App_Date: e.target.value }); validateForm() }} value={todayDate} />
+                            {errors.Book_Date && (
                                 <p className="mt-2 text-sm text-red-500 pl-1">
                                     {errors.Book_Date}
                                 </p>
@@ -153,10 +169,10 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
                                 </p>
 
                             )}
-</div>
-                        
+                        </div>
+
                         <input name="Book_Date" type="hidden" value={today} />
-                        <textarea name="Message" placeholder="Message" required className={`
+                        <textarea name="Message" placeholder="Message"  className={`
       w-full
       rounded-2xl
       border
@@ -167,14 +183,14 @@ export default function Appointment({ isSubmitted, setIsSubmitted, setShowModal,
       transition
 
       ${errors.App_Date
-                                        ? "border-red-400 focus:ring-red-200"
-                                        : "border-gray-200 focus:ring-[#5A4FCF]/20"
-                                    }
+                                ? "border-red-400 focus:ring-red-200"
+                                : "border-gray-200 focus:ring-[#5A4FCF]/20"
+                            }
 
       focus:outline-none
       focus:ring-4
     `}
-                        onChange={(e) => setFormData({ ...formData, Message: e.target.value })} >{`Hello Doctor, I would like to book an appointment `}</textarea >
+                            onChange={(e) => setFormData({ ...formData, Message: e.target.value })}></textarea >
                         <button
                             disabled={isSubmitted}
                             className="bg-[#5A4FCF] text-white w-full py-2 rounded"
