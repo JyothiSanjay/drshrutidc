@@ -43,7 +43,7 @@ export default function ReviewsSection() {
                         }}
 
                         onMouseEnter={() => setIsPaused(true)}
-                        onMouseLeave={() => {setIsPaused(false); setExpanded(false)}}
+                        onMouseLeave={() => { setIsPaused(false); setExpanded(false) }}
 
                         className="flex gap-8 w-max mb-2 mt-2"
                     >
