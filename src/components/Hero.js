@@ -74,7 +74,7 @@ const staggerContainer = {
 
           <img
             src={heroImage}
-            alt="Dr. Shruthi's's Dental Clinic"
+            alt="Dr. Shruthi's's Dental Clinic Malad East Mumbai"
             className="relative w-[380px] md:w-[480px] rounded-[28px] shadow-2xl border-4 border-white object-cover"
           />
         </motion.div>

@@ -27,7 +27,7 @@ export default function About() {
                     <img
                         src={profilePic}
                         className="relative rounded-[28px] shadow-2xl object-cover w-2/3 mx-auto border-4 border-white"
-                        alt="Dr. Shruthi's"
+                        alt="Dr. Shruthi's dental clinic malad east mumbai"
                     />
                 </motion.div>
 

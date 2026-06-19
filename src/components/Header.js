@@ -32,7 +32,7 @@ export default function Header({ logo, active, setActive }) {
             <div className="flex items-center gap-3">
                 <img
                     src={logo}
-                    alt="Clinic Logo"
+                    alt="Clinic Logo in Malad East Mumbai"
                     className="w-10 h-10 object-contain"
 
                 />

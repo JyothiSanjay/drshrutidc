@@ -54,7 +54,7 @@ export default function Location({setShowModal, setIsSubmitted, setShowSuccess})
             <p className="md:text-xl leading-relaxed text-gray-600 font-light max-w-2xl mx-auto mt-10">
              Book your appointment today and experience the best dental care in Malad East. Your journey to a healthier, brighter smile starts here!
             </p>
-            <img src={back} alt="Dental Clinic" className="relative m-auto w-1/3 h-[180px] mt-6" />
+            <img src={back} alt="Dental Clinic Malad East Mumbai" className="relative m-auto w-1/3 h-[180px] mt-6" />
           </div>
 
           <motion.button
