@@ -34,7 +34,7 @@ const staggerContainer = {
           </p>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-blue-800 via-green-500 to-indigo-400 bg-clip-text text-transparent">
-            Meet Your Dentist in Malad East
+            Meet Your Best Dentist in Malad East Mumbai
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
