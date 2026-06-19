@@ -34,7 +34,11 @@ function App() {
   const [isValid, setIsValid] = useState(false);
   const [active, setActive] = useState("home");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
+  window.addEventListener("load", () => {
+    const seo = document.getElementById("seo-content");
+    if (seo) seo.style.display = "none";
+  });
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -44,7 +48,7 @@ function App() {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  
+
 
   return (
     <>
@@ -59,7 +63,7 @@ function App() {
         </div>
 
         {/* Floating Buttons */}
-        <FloatingButtons phoneNumber={phoneNumber} whatsappNumber={whatsappNumber} setShowModal={setShowModal} setShowSuccess={setShowSuccess}/>
+        <FloatingButtons phoneNumber={phoneNumber} whatsappNumber={whatsappNumber} setShowModal={setShowModal} setShowSuccess={setShowSuccess} />
 
         {/* Hero */}
         <Hero phoneNumber={phoneNumber} setIsSubmitted={setIsSubmitted} setShowModal={setShowModal} setShowSuccess={setShowSuccess} />
@@ -69,7 +73,7 @@ function App() {
 
         {/* Appointment Modal */}
         {showModal && (
-          <Appointment isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} setShowModal={setShowModal} setShowSuccess={setShowSuccess}/>
+          <Appointment isSubmitted={isSubmitted} setIsSubmitted={setIsSubmitted} setShowModal={setShowModal} setShowSuccess={setShowSuccess} />
 
         )}
 
@@ -98,7 +102,7 @@ function App() {
 
         {/* Success Popup */}
         {showSuccess && (
-            <Thankyou setShowSuccess={setShowSuccess} setIsSubmitted={setIsSubmitted} />
+          <Thankyou setShowSuccess={setShowSuccess} setIsSubmitted={setIsSubmitted} />
         )}
 
         {/* Footer */}
